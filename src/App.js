@@ -1,6 +1,16 @@
+import Navbar from './components/Navbar';
+import UserList from './components/UserList';
+
+//redux
+import { Provider } from 'react-redux';
+import store from './redux';
+
 function App() {
   return (
-   <h1>Iniciando el proyecto</h1>
+    <Provider store={store}>
+      <Navbar />
+      <UserList />
+    </Provider>
   );
 }
 
